@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+    --bg-color: #0F0D13;
+    --player-color: #2A2141;
+    --song-title-color: #E1E1E6;
+    --song-author-color: #E1E1E6;
+    --line-song-color: #d9d9d9;
+    --minutes-color: #C4C4CC;
+}
+
+body {
+    background-color: var(--bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+.hide {
+    display: none;
+}
+
+.container {
+    width: 26.6rem;
+    height: 75vh;
+    background-color: var(--player-color);
+    padding: 3.8rem;
+    margin-top: 6rem;
+    border-radius: 9px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.song-image img {
+    width: 18.9rem;
+    border-radius: 6px;
+}
+
+.song-details {
+    display: flex;
+    flex-direction: column;
+    gap: .9rem;
+}
+
+.song-details h1 {
+    font-weight: 700;
+    font-size: 2.4rem;
+    line-height: 100%;
+    color: var(--song-title-color);
+}
+
+.song-details h2 {
+    font-size: 1.9rem;
+    line-height: 100%;
+    font-weight: 400;
+    font-style: normal;
+    opacity: 67%;
+    color: var(--song-author-color);
+}
+
+.song-controls {
+    display: flex;
+    justify-content: space-between;
+}
+
+.song-controls button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.song-timer {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.line-timer {
+    width: 18.9rem;
+    height: .6rem;
+    background: var(--line-song-color);
+    opacity: 30%;
+    border-radius: 9px;
+}
+
+.song-line {
+    width: 16.5rem;
+    height: .6rem;
+    background: var(--line-song-color);
+    opacity: 80%;
+    border-radius: 9px;
+    position: absolute;
+    left: 0;
+}
+
+.song-minutes {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 160%;
+    color: var(--minutes-color);
+    margin-top: .9rem;
+}
