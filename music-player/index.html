@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <script src="index.js" defer></script>
     <link rel="shortcut icon" href="assets/icons8-musical-notes-16.png" type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Music Player</title>
 </head>
 <body>
@@ -29,6 +30,9 @@
                     <path d="M8.32137 25.586C7.9759 25.5853 7.63655 25.4948 7.33669 25.3232C6.66148 24.9406 6.24173 24.1978 6.24173 23.3915V7.07398C6.24173 6.26542 6.66148 5.52494 7.33669 5.14232C7.64369 4.96589 7.99244 4.87516 8.3465 4.87961C8.70056 4.88407 9.04692 4.98354 9.34938 5.16764L23.2952 13.5155C23.5859 13.6977 23.8255 13.9508 23.9916 14.251C24.1577 14.5511 24.2448 14.8886 24.2448 15.2316C24.2448 15.5747 24.1577 15.9121 23.9916 16.2123C23.8255 16.5125 23.5859 16.7655 23.2952 16.9478L9.34713 25.2979C9.0376 25.485 8.68307 25.5846 8.32137 25.586Z" fill="#E1E1E6"/>
                     </svg>                    
             </button>
+            <button class="pause hide">
+                <i class="fa-solid fa-pause"></i>
+            </button>
             <button class="next-song">
                 <svg width="29" height="30" viewBox="0 0 29 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g clip-path="url(#clip0_1_74)">
@@ -42,12 +46,14 @@
                     </svg>                    
             </button>
         </div>
-        <div class="song-timer">
-            <div class="line-timer"></div>
-            <div class="song-line"></div>
-            <div class="song-minutes">
-                <div class="total-minutes">03:20</div>
-                <div class="minutes-left">00:12</div>
+        <div class="line-timer">
+            <div class="line">
+                <progress value="0" max="1"></progress>
+                <div class="point"></div>
+            </div>
+            <div class="timer">
+                    <p class="start">0:00</p>
+                    <p class="end">0:00</p>
             </div>
         </div>
     </div>
